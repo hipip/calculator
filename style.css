@@ -3,3 +3,88 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc-container {
+    position: relative;
+    border-radius: 15px;
+    padding: 4em 2em;
+    background-color: rgb(32, 30, 51);
+}
+
+.calc-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em 2em;
+    border-radius: 15px;
+}
+
+.window-btn {
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    border: none;
+    font-size: 1.1em;
+}
+
+.window-btn:hover {
+    color: black;
+}
+
+.close-btn {
+    background-color: red;
+}
+.minimize-btn {
+    background-color: yellow;
+}
+.maximize-btn {
+    background-color: greenyellow;
+}
+
+.calc-display-container {
+    padding: 3em 2em;
+    margin: 2em 0;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.calc-btn-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.btn {
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    border: none;
+    margin: 0.2em;
+    font-size: 1.15em;
+    font-weight: 600;
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(43, 41, 65);
+    color: white;
+}
+
+.btn:hover {
+    filter: brightness(1.3);
+}
+
+.equals-btn {
+    grid-row: 4/-1;
+    grid-column: 5/-1;
+    background-color: rgb(45, 129, 238);
+}
+
+.clear-btn {
+    background-color: rgb(228, 68, 68);
+}

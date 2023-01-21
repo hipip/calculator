@@ -6,46 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="calc-container">
-        <div class="calc-display">0</div>
+        <div class="calc-header">
+            <button class="close-btn window-btn">x</button>
+            <button class="minimize-btn window-btn">-</button>
+            <button class="maximize-btn window-btn">▫</button>
+        </div>
+        <div class="calc-display-container">
+            <h2 class="calc-display">0</p>
+        </div>
         <div class="calc-btn-container">
-            <div class="row1">
-                <button class="btn clear-btn">clear</button>
-                <button class="btn left-parenthesis-btn">(</button>
-                <button class="btn right-parenthesis-btn">(</button>
-                <button class="btn mode-btn">mod</button>
-                <button class="btn pi-btn">π</button>
-            </div>
-            <div class="row2">
-                <button class="btn num-btn" id="7">7</button>
-                <button class="btn num-btn" id="8">8</button>
-                <button class="btn num-btn" id="9">9</button>
-                <button class="btn div-btn">÷</button>
-                <button class="btn sqrt-btn">√</button>
-            </div>
-            <div class="row3">
-                <button class="btn num-btn" id="4">4</button>
-                <button class="btn num-btn" id="5">5</button>
-                <button class="btn num-btn" id="6">6</button>
-                <button class="btn  mul-btn">x</button>
-                <button class="btn square-btn">x²</button>
-            </div>
-            <div class="row4">
-                <button class="btn num-btn" id="1">1</button>
-                <button class="btn num-btn" id="2">2</button>
-                <button class="btn num-btn" id="3">3</button>
-                <button class="btn sub-btn">-</button>
-                <button class="btn equals-btn">=</button>
-            </div>
-            <div class="row5">
-                <button class="btn num0-btn">0</button>
-                <button class="btn point-btn">.</button>
-                <button class="btn percentage-btn">%</button>
-                <button class="btn add-btn">+</button>
-            </div>
+            <button class="btn clear-btn">clear</button>
+            <button class="btn left-parenthesis-btn">(</button>
+            <button class="btn right-parenthesis-btn">)</button>
+            <button class="btn mode-btn">mod</button>
+            <button class="btn pi-btn">π</button>
+            <button class="btn num-btn" id="7">7</button>
+            <button class="btn num-btn" id="8">8</button>
+            <button class="btn num-btn" id="9">9</button>
+            <button class="btn div-btn">÷</button>
+            <button class="btn sqrt-btn">√</button>
+            <button class="btn num-btn" id="4">4</button>
+            <button class="btn num-btn" id="5">5</button>
+            <button class="btn num-btn" id="6">6</button>
+            <button class="btn mul-btn">x</button>
+            <button class="btn square-btn">x²</button>
+            <button class="btn num-btn" id="1">1</button>
+            <button class="btn num-btn" id="2">2</button>
+            <button class="btn num-btn" id="3">3</button>
+            <button class="btn sub-btn">-</button>
+            <button class="btn equals-btn">=</button>
+            <button class="btn num0-btn">0</button>
+            <button class="btn point-btn">.</button>
+            <button class="btn percentage-btn">%</button>
+            <button class="btn add-btn">+</button>
         </div>
     </div>
 </body>
@@ -58,6 +56,13 @@
             display.innerText += e.target.id
         })
     })
+    document.querySelector('.maximize-btn').onclick = (e) => {
+        e.preventDefault();
+        document.querySelector('.calc-container').style.width = "100%";
+        document.querySelector('.calc-container').style.height = "100%";
+        document.querySelector('.calc-container').style.borderRadius = "0";
+
+    }
 
 </script>
 
