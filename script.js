@@ -1,7 +1,8 @@
 const calculator = document.querySelector(".calc-container");
 const calcDisplay = document.querySelector(".calc-display");
+const calcTopDisplay = document.querySelector(".calc-top-display");
 const NumsBtns = document.querySelectorAll(".num-btn");
-const operationsBtns = document.querySelectorAll("");
+const operationsBtns = document.querySelectorAll(".op-btn");
 const clearBtn = document.querySelector(".clear-btn");
 const maximizeBtn = document.querySelector(".maximize-btn");
 const minimizeBtn = document.querySelector(".minimize-btn");
@@ -23,4 +24,9 @@ clearBtn.addEventListener("click", clearCalcDisplay);
 // Setting the click event listener for every button that is a number
 NumsBtns.forEach((btn) => {
     btn.addEventListener("click", numsBtnsEventHandler);
+});
+
+document.querySelector("#add").addEventListener("click", (e) => {
+    console.log("+");
+    calcTopDisplay.innerText = calcDisplay.innerText + " + ";
 });
