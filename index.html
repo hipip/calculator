@@ -10,7 +10,6 @@
 
 <body>
     <div class="calc-container">
-        <div class="calc-header"></div>
         <div class="calc-display">0</div>
         <div class="calc-btn-container">
             <div class="row1">
@@ -21,23 +20,23 @@
                 <button class="btn pi-btn">π</button>
             </div>
             <div class="row2">
-                <button class="btn num7-btn">7</button>
-                <button class="btn num8-btn">8</button>
-                <button class="btn num9-btn">9</button>
+                <button class="btn num-btn" id="7">7</button>
+                <button class="btn num-btn" id="8">8</button>
+                <button class="btn num-btn" id="9">9</button>
                 <button class="btn div-btn">÷</button>
                 <button class="btn sqrt-btn">√</button>
             </div>
             <div class="row3">
-                <button class="btn num4-btn">4</button>
-                <button class="btn num5-btn">5</button>
-                <button class="btn num6-btn">6</button>
-                <button class="btn mul-btn">x</button>
+                <button class="btn num-btn" id="4">4</button>
+                <button class="btn num-btn" id="5">5</button>
+                <button class="btn num-btn" id="6">6</button>
+                <button class="btn  mul-btn">x</button>
                 <button class="btn square-btn">x²</button>
             </div>
             <div class="row4">
-                <button class="btn num1-btn">1</button>
-                <button class="btn num2-btn">2</button>
-                <button class="btn num3-btn">3</button>
+                <button class="btn num-btn" id="1">1</button>
+                <button class="btn num-btn" id="2">2</button>
+                <button class="btn num-btn" id="3">3</button>
                 <button class="btn sub-btn">-</button>
                 <button class="btn equals-btn">=</button>
             </div>
@@ -50,5 +49,16 @@
         </div>
     </div>
 </body>
+<script>
+    const display = document.querySelector('.calc-display')
+    document.querySelectorAll('.num-btn').forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            display.innerText == 0 ? display.innerText = "" : "";
+            display.innerText += e.target.id
+        })
+    })
+
+</script>
 
 </html>
