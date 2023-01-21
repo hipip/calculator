@@ -40,7 +40,7 @@
             <button class="btn num-btn" id="3">3</button>
             <button class="btn sub-btn">-</button>
             <button class="btn equals-btn">=</button>
-            <button class="btn num0-btn">0</button>
+            <button class="btn num-btn" id="0">0</button>
             <button class="btn point-btn">.</button>
             <button class="btn percentage-btn">%</button>
             <button class="btn add-btn">+</button>
@@ -58,9 +58,17 @@
     })
     document.querySelector('.maximize-btn').onclick = (e) => {
         e.preventDefault();
-        document.querySelector('.calc-container').classList.toggle('maximized')
-
+        document.querySelector('.calc-container').classList.toggle("maximized");
     }
+    document.querySelector('.minimize-btn').onclick = (e) => {
+        e.preventDefault();
+        document.querySelector('.calc-container').classList.toggle("minimized");
+    }
+    document.querySelector('.close-btn').onclick = (e) => {
+        e.preventDefault();
+        close();
+    }
+
 
 </script>
 
