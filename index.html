@@ -47,29 +47,7 @@
         </div>
     </div>
 </body>
-<script>
-    const display = document.querySelector('.calc-display')
-    document.querySelectorAll('.num-btn').forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            display.innerText == 0 ? display.innerText = "" : "";
-            display.innerText += e.target.id
-        })
-    })
-    document.querySelector('.maximize-btn').onclick = (e) => {
-        e.preventDefault();
-        document.querySelector('.calc-container').classList.toggle("maximized");
-    }
-    document.querySelector('.minimize-btn').onclick = (e) => {
-        e.preventDefault();
-        document.querySelector('.calc-container').classList.toggle("minimized");
-    }
-    document.querySelector('.close-btn').onclick = (e) => {
-        e.preventDefault();
-        close();
-    }
-
-
-</script>
+<script src="funs.js"></script>
+<script src="script.js"></script>
 
 </html>

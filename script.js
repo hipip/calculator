@@ -1,28 +1,25 @@
-const add = (a, b) => {
-    return a + b;
-};
+const calcDisplay = document.querySelector(".calc-display");
+const calcNums = document.querySelectorAll(".num-btn");
+const maximizeBtn = document.querySelector(".maximize-btn");
+const minimizeBtn = document.querySelector(".minimize-btn");
+const closeBtn = document.querySelector(".close-btn");
 
-const substract = (a, b) => {
-    return a - b;
+calcNums.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        calcDisplay.innerText == 0 ? (calcDisplay.innerText = "") : "";
+        calcDisplay.innerText += e.target.id;
+    });
+});
+maximizeBtn.onclick = (e) => {
+    e.preventDefault();
+    document.querySelector(".calc-container").classList.toggle("maximized");
 };
-
-const multiply = (a, b) => {
-    return a * b;
+document.querySelector(".minimize-btn").onclick = (e) => {
+    e.preventDefault();
+    document.querySelector(".calc-container").classList.toggle("minimized");
 };
-
-const divide = (a, b) => {
-    return a / b;
-};
-
-const operate = (operator, op1, op2) => {
-    switch (operator) {
-        case "+":
-            return add(op1, op2);
-        case "-":
-            return substract(op1, op2);
-        case "*":
-            return multiply(op1, op2);
-        case "/":
-            return divide(op1, op2);
-    }
+document.querySelector(".close-btn").onclick = (e) => {
+    e.preventDefault();
+    close();
 };
