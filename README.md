@@ -4,5 +4,6 @@
 
 -   [x] add,sub, mul and div functions
 -   [x] operate function
--   [ ] basic html + css calculator
--   [ ] functions to populate the calculator's display
+-   [x] basic html + css calculator
+-   [x] functions to populate the calculator's display
+-   [ ] calculator logic working

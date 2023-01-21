@@ -58,9 +58,7 @@
     })
     document.querySelector('.maximize-btn').onclick = (e) => {
         e.preventDefault();
-        document.querySelector('.calc-container').style.width = "100%";
-        document.querySelector('.calc-container').style.height = "100%";
-        document.querySelector('.calc-container').style.borderRadius = "0";
+        document.querySelector('.calc-container').classList.toggle('maximized')
 
     }
 
