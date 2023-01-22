@@ -44,7 +44,6 @@ const updateTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
 const clearAll = () => {
     operator = null;
     firstOperand = null;
-    operator = null;
     display = "0";
     topDisplay = "";
     updateDisplay();
