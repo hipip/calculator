@@ -33,9 +33,11 @@ const updateCalcDisplay = () => (calcDisplay.innerText = display);
 
 const updateCalcTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
 
-const clearCalcDisplay = () => {
+const clearDisplay = () => {
     display = "";
+    topDisplay = "";
     updateCalcDisplay();
+    updateCalcTopDisplay();
 };
 
 /* Events Handlers */
