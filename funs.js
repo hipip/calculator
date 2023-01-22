@@ -78,9 +78,9 @@ const equalBtnHandler = () => {
         let result = operate(operator, firstOperand, display);
         display = result;
         firstOperand = result;
+        operator = null;
         updateDisplay();
         updateTopDisplay();
-        display = "0";
     }
 };
 
@@ -96,4 +96,9 @@ const percentageBtnHandler = () => {
         updateDisplay();
         updateTopDisplay();
     }
+};
+
+const piBtnHandler = () => {
+    display = Math.PI;
+    updateDisplay();
 };
