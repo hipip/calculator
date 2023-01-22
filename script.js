@@ -1,3 +1,4 @@
+// getting our dom objects
 const calculator = document.querySelector(".calc-container");
 const calcDisplay = document.querySelector(".calc-display");
 const calcTopDisplay = document.querySelector(".calc-top-display");
@@ -7,6 +8,14 @@ const clearBtn = document.querySelector(".clear-btn");
 const maximizeBtn = document.querySelector(".maximize-btn");
 const minimizeBtn = document.querySelector(".minimize-btn");
 const closeBtn = document.querySelector(".close-btn");
+
+// some variables for our calculator
+let firstOperand,
+    secondOperand,
+    operator,
+    acc,
+    display = "0",
+    topDisplay = "";
 
 maximizeBtn.onclick = () => {
     calculator.classList.toggle("maximized");
@@ -26,7 +35,6 @@ NumsBtns.forEach((btn) => {
     btn.addEventListener("click", numsBtnsEventHandler);
 });
 
-document.querySelector("#add").addEventListener("click", (e) => {
-    console.log("+");
-    calcTopDisplay.innerText = calcDisplay.innerText + " + ";
+operationsBtns.forEach((btn) => {
+    btn.addEventListener("click", opBtnsEventHandler);
 });

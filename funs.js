@@ -29,14 +29,26 @@ const operate = (operator, op1, op2) => {
 };
 
 /* UI functions */
+const updateCalcDisplay = () => (calcDisplay.innerText = display);
 
-const updateCalcDisplay = (newValue) => {
-    if (calcDisplay.innerText == 0) calcDisplay.innerText = newValue;
-    else calcDisplay.innerText += newValue;
+const updateCalcTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
+
+const clearCalcDisplay = () => {
+    display = "";
+    updateCalcDisplay();
 };
-const clearCalcDisplay = () => (calcDisplay.innerText = "0");
 
 /* Events Handlers */
 const numsBtnsEventHandler = (e) => {
-    updateCalcDisplay(e.target.id);
+    const num = e.target.id;
+    display = display == "0" ? num : display + num;
+    updateCalcDisplay();
+};
+
+const opBtnsEventHandler = (e) => {
+    if (!firstOperand) firstOperand = display;
+    let operator = e.target.textContent;
+    topDisplay = firstOperand + " " + operator;
+    updateCalcTopDisplay();
+    display = "";
 };
