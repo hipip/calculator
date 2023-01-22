@@ -76,3 +76,7 @@ const equalBtnHandler = () => {
         display = "0";
     }
 };
+
+const pointBtnHandler = () => {
+    if (!display.includes(".")) display += ".";
+};
