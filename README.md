@@ -8,4 +8,7 @@
 -   [x] functions to populate the calculator's display
 -   [x] calculator logic working
 -   [ ] Add parenthesis functionality
+-   [ ] Add square function
+-   [ ] Add root square function
+-   [ ] Style it more
 -   [ ] Be proud of yourself for finishing <3 :) !
