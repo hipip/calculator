@@ -71,6 +71,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
     text-align: right;
+    min-height: 150px;
 }
 .calc-display {
     margin-top: 0.5em;
