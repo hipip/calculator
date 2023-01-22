@@ -2,7 +2,8 @@
 
 ## Description
 
-This calculator was inspired by the gnome calculator and and the orchis gtk theme, for a live preview [Click here](https://somehowalive.github.io/calculator/)
+This calculator was inspired by the gnome calculator (long live linux users <3 ) and and the orchis gtk theme
+Live : https://somehowalive.github.io/calculator/
 
 ## TODOS
 
