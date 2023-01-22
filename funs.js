@@ -16,6 +16,8 @@ const divide = (a, b) => {
 };
 
 const operate = (operator, op1, op2) => {
+    op1 = Number(op1);
+    op2 = Number(op2);
     switch (operator) {
         case "+":
             return add(op1, op2);
@@ -29,28 +31,37 @@ const operate = (operator, op1, op2) => {
 };
 
 /* UI functions */
-const updateCalcDisplay = () => (calcDisplay.innerText = display);
+const updateDisplay = () => (calcDisplay.innerText = display);
 
-const updateCalcTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
+const updateTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
 
 const clearDisplay = () => {
-    display = "";
+    display = "0";
     topDisplay = "";
-    updateCalcDisplay();
-    updateCalcTopDisplay();
+    updateDisplay();
+    updateTopDisplay();
 };
 
 /* Events Handlers */
-const numsBtnsEventHandler = (e) => {
+const numsBtnsHandler = (e) => {
     const num = e.target.id;
     display = display == "0" ? num : display + num;
-    updateCalcDisplay();
+    updateDisplay();
 };
 
-const opBtnsEventHandler = (e) => {
+const opBtnsHandler = (e) => {
     if (!firstOperand) firstOperand = display;
-    let operator = e.target.textContent;
+    operator = e.target.textContent;
     topDisplay = firstOperand + " " + operator;
-    updateCalcTopDisplay();
-    display = "";
+    updateTopDisplay();
+    display = "0";
+};
+
+const equalBtnHandler = () => {
+    if (firstOperand && operator && display != "0" && display != "") {
+        topDisplay = firstOperand + " " + operator + " " + display + " = ";
+        display = operate(operator, firstOperand, display);
+        updateDisplay();
+        updateTopDisplay();
+    }
 };
