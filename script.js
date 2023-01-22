@@ -12,9 +12,7 @@ const closeBtn = document.querySelector(".close-btn");
 
 // some variables for our calculator
 let firstOperand,
-    secondOperand,
     operator,
-    acc,
     display = "0",
     topDisplay = "";
 
@@ -29,7 +27,7 @@ closeBtn.onclick = () => {
 };
 
 // setting the event listener for our clear btn
-clearBtn.addEventListener("click", clearDisplay);
+clearBtn.addEventListener("click", clearAll);
 
 // Setting the click event listener for every button that is a number
 NumsBtns.forEach((btn) => {

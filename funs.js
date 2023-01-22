@@ -23,9 +23,9 @@ const operate = (operator, op1, op2) => {
             return add(op1, op2);
         case "-":
             return substract(op1, op2);
-        case "*":
+        case "x":
             return multiply(op1, op2);
-        case "/":
+        case "÷":
             return divide(op1, op2);
     }
 };
@@ -35,7 +35,10 @@ const updateDisplay = () => (calcDisplay.innerText = display);
 
 const updateTopDisplay = () => (calcTopDisplay.innerText = topDisplay);
 
-const clearDisplay = () => {
+const clearAll = () => {
+    operator = null;
+    firstOperand = null;
+    operator = null;
     display = "0";
     topDisplay = "";
     updateDisplay();
@@ -50,18 +53,26 @@ const numsBtnsHandler = (e) => {
 };
 
 const opBtnsHandler = (e) => {
+    newOperator = e.target.textContent;
     if (!firstOperand) firstOperand = display;
-    operator = e.target.textContent;
+    else if (display != "0" && display != "")
+        firstOperand = operate(operator, firstOperand, display);
+    operator = newOperator;
     topDisplay = firstOperand + " " + operator;
+    display = firstOperand;
     updateTopDisplay();
-    display = "0";
+    updateDisplay();
+    display = "";
 };
 
 const equalBtnHandler = () => {
-    if (firstOperand && operator && display != "0" && display != "") {
+    if (firstOperand && operator && display != "") {
         topDisplay = firstOperand + " " + operator + " " + display + " = ";
-        display = operate(operator, firstOperand, display);
+        let result = operate(operator, firstOperand, display);
+        display = result;
+        firstOperand = result;
         updateDisplay();
         updateTopDisplay();
+        display = "0";
     }
 };
