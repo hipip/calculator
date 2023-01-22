@@ -1,5 +1,9 @@
 # calculator
 
+## Description
+
+This calculator was inspired by the gnome calculator and and the orchis gtk theme, for a live preview (click here)[https://somehowalive.github.io/calculator/]
+
 ## TODOS
 
 -   [x] add,sub, mul and div functions
