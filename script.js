@@ -28,7 +28,7 @@ closeBtn.onclick = () => {
 };
 
 // setting the event listener for our clear btn
-clearBtn.addEventListener("click", clearCalcDisplay);
+clearBtn.addEventListener("click", clearDisplay);
 
 // Setting the click event listener for every button that is a number
 NumsBtns.forEach((btn) => {

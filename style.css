@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(49, 49, 172);
+    background-color: rgb(59, 179, 153);
 }
 
 .calc-container {
@@ -19,6 +19,7 @@ body {
     padding: 4em 2em;
     background-color: rgb(32, 30, 51);
     transition: transform 0.4s ease-in-out;
+    box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.4);
 }
 
 .minimized {
