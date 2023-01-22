@@ -15,6 +15,10 @@ const divide = (a, b) => {
     return a / b;
 };
 
+const modulo = (a, b) => {
+    return a % b;
+};
+
 const operate = (operator, op1, op2) => {
     op1 = Number(op1);
     op2 = Number(op2);
@@ -27,6 +31,8 @@ const operate = (operator, op1, op2) => {
             return multiply(op1, op2);
         case "÷":
             return divide(op1, op2);
+        case "mod":
+            return modulo(op1, op2);
     }
 };
 
@@ -55,11 +61,12 @@ const numsBtnsHandler = (e) => {
 const opBtnsHandler = (e) => {
     newOperator = e.target.textContent;
     if (!firstOperand) firstOperand = display;
-    else if (display != "0" && display != "")
+    else if (display != "0" && operator) {
         firstOperand = operate(operator, firstOperand, display);
+        display = firstOperand;
+    }
     operator = newOperator;
     topDisplay = firstOperand + " " + operator;
-    display = firstOperand;
     updateTopDisplay();
     updateDisplay();
     display = "";
@@ -79,4 +86,14 @@ const equalBtnHandler = () => {
 
 const pointBtnHandler = () => {
     if (!display.includes(".")) display += ".";
+};
+
+const percentageBtnHandler = () => {
+    if (display != "0") {
+        topDisplay = display + " %";
+        display = display / 100;
+        firstOperand = display;
+        updateDisplay();
+        updateTopDisplay();
+    }
 };

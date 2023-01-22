@@ -6,6 +6,7 @@ const NumsBtns = document.querySelectorAll(".num-btn");
 const operationsBtns = document.querySelectorAll(".op-btn");
 const equalBtn = document.querySelector(".equals-btn");
 const pointBtn = document.querySelector(".point-btn");
+const percentageBtn = document.querySelector(".percentage-btn");
 const clearBtn = document.querySelector(".clear-btn");
 const maximizeBtn = document.querySelector(".maximize-btn");
 const minimizeBtn = document.querySelector(".minimize-btn");
@@ -42,3 +43,5 @@ operationsBtns.forEach((btn) => {
 equalBtn.addEventListener("click", equalBtnHandler);
 
 pointBtn.addEventListener("click", pointBtnHandler);
+
+percentageBtn.addEventListener("click", percentageBtnHandler);
