@@ -104,8 +104,17 @@ const piBtnHandler = () => {
 
 const squareBtnHandler = () => {
   if (display !== 0) {
-    display = display * display;
     topDisplay = display + "² = ";
+    display = display * display;
+    updateDisplay();
+    updateTopDisplay();
+  }
+};
+
+const rootBtnHandler = () => {
+  if (display && display !== 0) {
+    topDisplay = "√" + display + " = ";
+    display = Math.sqrt(display);
     updateDisplay();
     updateTopDisplay();
   }
