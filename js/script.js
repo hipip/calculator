@@ -8,6 +8,7 @@ const equalBtn = document.querySelector(".equals-btn");
 const pointBtn = document.querySelector(".point-btn");
 const PiBtn = document.querySelector(".pi-btn");
 const squareBtn = document.querySelector(".square-btn");
+const rootBtn = document.querySelector(".root-btn");
 const percentageBtn = document.querySelector(".percentage-btn");
 const clearBtn = document.querySelector(".clear-btn");
 const maximizeBtn = document.querySelector(".maximize-btn");
@@ -59,3 +60,5 @@ percentageBtn.addEventListener("click", percentageBtnHandler);
 PiBtn.addEventListener("click", piBtnHandler);
 
 squareBtn.addEventListener("click", squareBtnHandler);
+
+rootBtn.addEventListener("click", rootBtnHandler);
