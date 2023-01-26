@@ -7,6 +7,7 @@ const operationsBtns = document.querySelectorAll(".op-btn");
 const equalBtn = document.querySelector(".equals-btn");
 const pointBtn = document.querySelector(".point-btn");
 const PiBtn = document.querySelector(".pi-btn");
+const squareBtn = document.querySelector(".square-btn");
 const percentageBtn = document.querySelector(".percentage-btn");
 const clearBtn = document.querySelector(".clear-btn");
 const maximizeBtn = document.querySelector(".maximize-btn");
@@ -21,17 +22,17 @@ let topDisplay = ""; // this one is for the top display which is used when perfo
 
 // setting up the onclick event for our maximize button
 maximizeBtn.onclick = () => {
-    calculator.classList.toggle("maximized");
+  calculator.classList.toggle("maximized");
 };
 
 // setting up the onclick event for our minimize button
 minimizeBtn.onclick = () => {
-    calculator.classList.toggle("minimized");
+  calculator.classList.toggle("minimized");
 };
 
 //setting up the onclick event for our close button
 closeBtn.onclick = () => {
-    close();
+  close();
 };
 
 // setting the event listener for click on the calculator clear btn
@@ -39,12 +40,12 @@ clearBtn.addEventListener("click", clearAll);
 
 // Setting up the click event listener for our calculator numbers
 NumsBtns.forEach((btn) => {
-    btn.addEventListener("click", numsBtnsHandler);
+  btn.addEventListener("click", numsBtnsHandler);
 });
 
 // Settting up the event listener for each of our basic arithmetic operations buttons
 operationsBtns.forEach((btn) => {
-    btn.addEventListener("click", opBtnsHandler);
+  btn.addEventListener("click", opBtnsHandler);
 });
 
 // setting up the event listener for our equals button
@@ -56,3 +57,5 @@ pointBtn.addEventListener("click", pointBtnHandler);
 percentageBtn.addEventListener("click", percentageBtnHandler);
 
 PiBtn.addEventListener("click", piBtnHandler);
+
+squareBtn.addEventListener("click", squareBtnHandler);

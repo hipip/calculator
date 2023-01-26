@@ -105,6 +105,8 @@ const piBtnHandler = () => {
 const squareBtnHandler = () => {
   if (display !== 0) {
     display = display * display;
+    topDisplay = display + "² = ";
     updateDisplay();
+    updateTopDisplay();
   }
 };
