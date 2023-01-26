@@ -106,6 +106,7 @@ const squareBtnHandler = () => {
   if (display !== 0) {
     topDisplay = display + "² = ";
     display = display * display;
+    firstOperand = display;
     updateDisplay();
     updateTopDisplay();
   }
@@ -115,6 +116,7 @@ const rootBtnHandler = () => {
   if (display && display !== 0) {
     topDisplay = "√" + display + " = ";
     display = Math.sqrt(display);
+    firstOperand = display;
     updateDisplay();
     updateTopDisplay();
   }
