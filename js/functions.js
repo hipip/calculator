@@ -53,8 +53,13 @@ const clearAll = () => {
 /* Events Handlers */
 const numsBtnsHandler = (e) => {
   const num = e.target.innerText;
+  if (topDisplay && display) {
+    display = "";
+    topDisplay = "";
+  }
   display = display == "0" ? num : display + num;
   updateDisplay();
+  updateTopDisplay();
 };
 
 const opBtnsHandler = (e) => {
