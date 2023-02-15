@@ -62,3 +62,13 @@ PiBtn.addEventListener("click", piBtnHandler);
 squareBtn.addEventListener("click", squareBtnHandler);
 
 rootBtn.addEventListener("click", rootBtnHandler);
+
+/* Adding keyboard support */
+document.addEventListener("keypress", (e) => {
+  let key = e.key;
+  if (key === ".") pointBtn.click();
+  else if (key >= "0" && key <= "9") document.querySelector(`#num${+key}`).click();
+  else if (key === "*" || key === "+" || key === "-" || key === "/") document.querySelector(`.op-btn[data-k="${key}"]`).click();
+  else if (key === "" || key === "Enter" || key === "=") equalBtn.click();
+  else if (key === "c") clearBtn.click();
+});

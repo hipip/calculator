@@ -52,15 +52,15 @@ const clearAll = () => {
 
 /* Events Handlers */
 const numsBtnsHandler = (e) => {
-  const num = e.target.id;
+  const num = e.target.innerText;
   display = display == "0" ? num : display + num;
   updateDisplay();
 };
 
 const opBtnsHandler = (e) => {
   newOperator = e.target.textContent;
-  if (!firstOperand) firstOperand = display;
-  else if (display != "0" && operator) {
+  firstOperand = display;
+  if (display != "0" && operator) {
     firstOperand = operate(operator, firstOperand, display);
     display = firstOperand;
   }
