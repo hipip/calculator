@@ -87,7 +87,7 @@ body {
   grid-template-rows: repeat(5, 1fr);
 }
 .btn {
-  padding: 1em 1.5em;
+  padding: 1rem;
   border-radius: 10px;
   border: none;
   margin: 0.2em;
@@ -110,4 +110,15 @@ body {
 
 .clear-btn {
   background-color: rgb(228, 68, 68);
+}
+
+@media (max-width: 450px) {
+  .calc-header {
+    display: none;
+  }
+  .calc-container {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+  }
 }
