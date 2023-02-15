@@ -53,7 +53,7 @@ const clearAll = () => {
 /* Events Handlers */
 const numsBtnsHandler = (e) => {
   const num = e.target.innerText;
-  if (topDisplay && display) {
+  if (topDisplay && display && firstOperand) {
     display = "";
     topDisplay = "";
   }
