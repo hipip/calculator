@@ -53,11 +53,7 @@ const clearAll = () => {
 /* Events Handlers */
 const numsBtnsHandler = (e) => {
   const num = e.target.innerText;
-  if (topDisplay && display && firstOperand) {
-    display = "";
-    topDisplay = "";
-  }
-  display = display == "0" ? num : display + num;
+  display = display === "0" ? num : display + num;
   updateDisplay();
   updateTopDisplay();
 };
@@ -65,14 +61,13 @@ const numsBtnsHandler = (e) => {
 const opBtnsHandler = (e) => {
   newOperator = e.target.textContent;
   firstOperand = display;
-  if (display != "0" && operator) {
+  if (display !== "0" && operator) {
     firstOperand = operate(operator, firstOperand, display);
     display = firstOperand;
   }
   operator = newOperator;
   topDisplay = firstOperand + " " + operator;
   updateTopDisplay();
-  updateDisplay();
   display = "";
 };
 
