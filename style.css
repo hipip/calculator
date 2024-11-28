@@ -109,6 +109,7 @@ body {
 }
 
 .clear-btn {
+  grid-column: span 3;
   background-color: rgb(228, 68, 68);
 }
 
